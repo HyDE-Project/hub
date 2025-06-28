@@ -1,0 +1,12 @@
+{
+  "custom/showmethekey": {
+    "format": "{}",
+    "max-length": 50,
+    "exec": "${XDG_CONFIG_HOME:-$HOME/.config}/waybar/scripts/showmethekey.py --timeout 2 --waybar --wpm 2 --gauge --rtl ",
+    "return-type": "json",
+    // "restart-interval": 10,
+    "tooltip": true,
+    "on-click": "${XDG_CONFIG_HOME:-$HOME/.config}/waybar/scripts/showmethekey.py --password-mode",
+    "escape": false
+  }
+}

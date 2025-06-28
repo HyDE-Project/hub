@@ -1,0 +1,15 @@
+{
+  "custom/opentabletdriver": {
+    "format": "{}",
+    "return-type": "json",
+    "exec-if": "systemctl --user is-active opentabletdriver.service",
+    "exec": "~/.config/waybar/scripts/opentabletdriver.py --waybar",
+    "on-click": "~/.config/waybar/scripts/opentabletdriver.py --next ; pkill -RTMIN+19 waybar",
+    "on-click-right": "~/.config/waybar/scripts/opentabletdriver.py --prev ; pkill -RTMIN+19 waybar",
+    "interval": "once",
+    "tooltip": true,
+    "max-length": 20,
+    "min-length": 3,
+    "signal": 19
+  }
+}
